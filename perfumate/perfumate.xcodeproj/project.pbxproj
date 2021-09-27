@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		E31CE771270225F70093B382 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E31CE770270225F70093B382 /* .swiftlint.yml */; };
+		E31CE775270229AD0093B382 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = E31CE774270229AD0093B382 /* CombineMoya */; };
+		E31CE777270229AD0093B382 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = E31CE776270229AD0093B382 /* Moya */; };
+		E31CE77B27022A170093B382 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E31CE77A27022A170093B382 /* Kingfisher */; };
+		E31CE77F27022A3E0093B382 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = E31CE77E27022A3E0093B382 /* Then */; };
 		E36567472700C63400328359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36567462700C63400328359 /* AppDelegate.swift */; };
 		E36567492700C63400328359 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36567482700C63400328359 /* SceneDelegate.swift */; };
 		E365674B2700C63400328359 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E365674A2700C63400328359 /* ViewController.swift */; };
@@ -33,6 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E31CE77B27022A170093B382 /* Kingfisher in Frameworks */,
+				E31CE777270229AD0093B382 /* Moya in Frameworks */,
+				E31CE775270229AD0093B382 /* CombineMoya in Frameworks */,
+				E31CE77F27022A3E0093B382 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +95,12 @@
 			dependencies = (
 			);
 			name = perfumate;
+			packageProductDependencies = (
+				E31CE774270229AD0093B382 /* CombineMoya */,
+				E31CE776270229AD0093B382 /* Moya */,
+				E31CE77A27022A170093B382 /* Kingfisher */,
+				E31CE77E27022A3E0093B382 /* Then */,
+			);
 			productName = perfumate;
 			productReference = E36567432700C63400328359 /* perfumate.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +128,11 @@
 				Base,
 			);
 			mainGroup = E365673A2700C63400328359;
+			packageReferences = (
+				E31CE773270229AD0093B382 /* XCRemoteSwiftPackageReference "Moya" */,
+				E31CE77927022A170093B382 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				E31CE77D27022A3E0093B382 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = E36567442700C63400328359 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -365,6 +384,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E31CE773270229AD0093B382 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+		E31CE77927022A170093B382 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		E31CE77D27022A3E0093B382 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E31CE774270229AD0093B382 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E31CE773270229AD0093B382 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		E31CE776270229AD0093B382 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E31CE773270229AD0093B382 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		E31CE77A27022A170093B382 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E31CE77927022A170093B382 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		E31CE77E27022A3E0093B382 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E31CE77D27022A3E0093B382 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E365673B2700C63400328359 /* Project object */;
 }
