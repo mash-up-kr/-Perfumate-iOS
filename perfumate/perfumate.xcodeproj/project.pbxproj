@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E31CE771270225F70093B382 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E31CE770270225F70093B382 /* .swiftlint.yml */; };
 		E36567472700C63400328359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36567462700C63400328359 /* AppDelegate.swift */; };
 		E36567492700C63400328359 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36567482700C63400328359 /* SceneDelegate.swift */; };
 		E365674B2700C63400328359 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E365674A2700C63400328359 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E31CE770270225F70093B382 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		E36567432700C63400328359 /* perfumate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = perfumate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E36567462700C63400328359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E36567482700C63400328359 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				E36567462700C63400328359 /* AppDelegate.swift */,
+				E31CE770270225F70093B382 /* .swiftlint.yml */,
 				E36567482700C63400328359 /* SceneDelegate.swift */,
 				E365674A2700C63400328359 /* ViewController.swift */,
 				E365674C2700C63400328359 /* Main.storyboard */,
@@ -74,6 +77,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E36567572700C63600328359 /* Build configuration list for PBXNativeTarget "perfumate" */;
 			buildPhases = (
+				E31CE76E270225770093B382 /* SwiftLint Script */,
 				E365673F2700C63400328359 /* Sources */,
 				E36567402700C63400328359 /* Frameworks */,
 				E36567412700C63400328359 /* Resources */,
@@ -124,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E31CE771270225F70093B382 /* .swiftlint.yml in Resources */,
 				E36567532700C63600328359 /* LaunchScreen.storyboard in Resources */,
 				E36567502700C63600328359 /* Assets.xcassets in Resources */,
 				E365674E2700C63400328359 /* Main.storyboard in Resources */,
@@ -131,6 +136,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E31CE76E270225770093B382 /* SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E365673F2700C63400328359 /* Sources */ = {
